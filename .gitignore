@@ -1,0 +1,26 @@
+# Byte-compiled files and caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Egg and build artifacts
+*.egg-info/
+*.egg/
+
+# Virtual environment directories
+venv/
+.env/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Test artifacts
+.pytest_cache/
+
+# Dependency management files
+pip-wheel-metadata/
