@@ -45,6 +45,19 @@ python -m src.run_router
 python scripts/add_git_hooks.py
 ```
 
+## Usage
+
+Send POST requests to the router (port 3000):
+
+```bash
+curl -X POST http://localhost:3000/ -H "Content-Type: application/json" -d '{"message": "test"}'
+```
+
+The router will:
+1. Distribute requests across application instances
+2. Detect and skip slow or failed instances
+3. Return 503 if no healthy instances are available
+
 ## Testing
 
 Run the test suite:
