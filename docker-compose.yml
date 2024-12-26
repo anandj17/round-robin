@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  router:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - DOCKER_ENV=true
+    depends_on:
+      - app1
+      - app2
+      - app3
+
+  app1:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - PORT=3001
+      - INSTANCE_NAME=app1
+      - DOCKER_ENV=true
+    volumes:
+      - ./logs:/app/logs
+    ports:
+      - "3001:3001"
+
+  app2:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - PORT=3002
+      - INSTANCE_NAME=app2
+      - DOCKER_ENV=true
+    volumes:
+      - ./logs:/app/logs
+    ports:
+      - "3002:3002"
+
+  app3:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - PORT=3003
+      - INSTANCE_NAME=app3
+      - DOCKER_ENV=true
+    volumes:
+      - ./logs:/app/logs
+    ports:
+      - "3003:3003"
