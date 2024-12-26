@@ -22,6 +22,11 @@ python -m src.run_app 3002
 python -m src.run_app 3003
 ```
 
+3. Start the router:
+```bash
+python -m src.run_router
+```
+
 ## Testing
 
 Run the test suite:
@@ -35,3 +40,9 @@ Test coverage includes:
    - Successful Request
    - Bad request (Invalid JSON)
    - Internal server error
+- Round robin API functionality
+   - All app instances are healthy
+   - No app instances are healthy
+   - One of the instances is not healthy
+   - One of the instance is slow
+   - Round robin flow
