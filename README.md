@@ -8,6 +8,19 @@ A round-robin API system that efficiently distributes requests across multiple a
 - Detect and handle slow or failed instances
 - Ensure a consistent response to clients
 
+## Setup
+
+### Using Docker Compose (Recommended)
+
+1. Build and start all services:
+```bash
+docker-compose up --build
+```
+
+This will start:
+- Round Robin on port 3000
+- Three application instances on ports 3001, 3002, and 3003
+
 ### Manual Setup
 
 1. Install dependencies:
