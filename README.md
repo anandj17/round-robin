@@ -40,6 +40,11 @@ python -m src.run_app 3003
 python -m src.run_router
 ```
 
+### Git hooks
+```bash
+python scripts/add_git_hooks.py
+```
+
 ## Testing
 
 Run the test suite:
